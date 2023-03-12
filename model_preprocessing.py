@@ -29,5 +29,5 @@ X_test = df_total.iloc[df_train.shape[0]:,:]
 
 
 #Сохранение файлов
-X_train.to_csv('/train/X_train.csv', index=False)
-X_test.to_csv('/test/X_test.csv', index=False)
+X_train.to_csv('train/X_train.csv', index=False)
+X_test.to_csv('test/X_test.csv', index=False)
