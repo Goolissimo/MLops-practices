@@ -8,7 +8,7 @@ gdown.download(id="1waefPsrT7sm5rsRMjDHGCXreY45q9tcY", output="./data/dataset.cs
 #открываем данные в виде датафрейма
 df = pd.read_csv('Dataset.csv', delimiter = ',', index_col = 'Unnamed: 0')
 #делим данные на тренировочные и тестовые
-X_train, X_test, y_train, y_test = train_test_split(
+X_train, X_test, Y_train, Y_test = train_test_split(
     df[['id', 'year', 'code', 'period']], 
     df[['polution_clf']], 
     test_size = 0.20, 
