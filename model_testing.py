@@ -5,5 +5,4 @@ LogReg = pickle.load(model)
 X_test = pd.read_csv('test/X_val.csv', delimiter = ',')
 Y_test = pd.read_csv('test/Y_val.csv', delimiter = ',')
 y_preds = LogReg.predict(X_test)
-f1_score(Y_test, y_preds, average='micro')
-
+print(f'f1_score: {f1_score(Y_test, y_preds, average='micro')})
