@@ -16,5 +16,5 @@ X_train, X_test, Y_train, Y_test = train_test_split(
 #сохраняем файлы в папках train и test
 X_train.to_csv('train/X_train.csv', index=True)
 X_test.to_csv('test/X_test.csv', index=True)
-Y_train.to_csv('train/Y_train.csv', index=True)
-Y_test.to_csv('test/Y_test.csv', index=True)
+Y_train.to_csv('train/Y_train.csv', index=False)
+Y_test.to_csv('test/Y_test.csv', index=False)
