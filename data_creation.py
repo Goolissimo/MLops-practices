@@ -2,7 +2,6 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 import gdown
 
-
 #скачиваем csv файл с гугл диска и сохраняем в папке data
 gdown.download(id="1waefPsrT7sm5rsRMjDHGCXreY45q9tcY", output="./data/dataset.csv", quiet=False)
 #открываем данные в виде датафрейма
