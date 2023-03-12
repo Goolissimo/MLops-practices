@@ -6,7 +6,7 @@ import gdown
 #скачиваем csv файл с гугл диска и сохраняем в папке data
 gdown.download(id="1waefPsrT7sm5rsRMjDHGCXreY45q9tcY", output="./data/dataset.csv", quiet=False)
 #открываем данные в виде датафрейма
-df = pd.read_csv('./data/dataset.csv', delimiter = ',', index_col = 0)
+df = pd.read_csv('/data/dataset.csv', delimiter = ',', index_col = 0)
 #делим данные на тренировочные и тестовые
 X_train, X_test, Y_train, Y_test = train_test_split(
     df[['id', 'year', 'code', 'period']], 
