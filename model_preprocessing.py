@@ -2,7 +2,7 @@ import pandas as pd
 
 
 df_train = pd.read_csv('train/X_train.csv', index_col=0)
-df_test = pd.read_csv('test/X_val.csv', index_col=0)
+df_test = pd.read_csv('test/X_test.csv', index_col=0)
 #Объединяем датафреймы
 df_total = pd.concat([df_train, df_test])
 
