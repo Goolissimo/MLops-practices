@@ -11,4 +11,4 @@ model = LogisticRegression(fit_intercept=True,
                             max_iter=10000)
 model.fit(X_train, y_train)
 
-pickle.dump(model)
+pickle.dump(model, open('model.pkl', 'wb'))
