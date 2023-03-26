@@ -10,7 +10,7 @@ pipeline {
         }
         stage('data_creation') {
             steps {
-                sh 'data_creation.py'
+                sh 'python3 data_creation.py'
             }
         }
         stage('model_preprocessing') {
