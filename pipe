@@ -8,11 +8,6 @@ pipeline {
                 sh 'pip install pandas'
                 }
         }
-        stage('git_run'){
-            steps{
-                build job: "Practice 2"
-            }
-        }
         stage('data_creation') {
             steps {
                 sh 'data_creation.py'
