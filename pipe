@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+    stages {
+        stage('Preparations') {
+            steps {
+                sh 'pip install gdown'
+                sh 'pip install scikit-learn'
+                sh 'pip install pandas'
+                sh 'rmdir data test train'
+                sh 'mkdir data test train'
+                }
+        }
+        stage('git_run'){
+            steps{
+                build job: "Practice 2"
+            }
+        }
+        stage('data_creation') {
+            steps {
+                sh 'data_creation.py'
+            }
+        }
+        stage('model_preprocessing') {
+            steps{
+                sh 'python3 model_preprocessing.py'
+            }
+        }
+        stage('model_preparation'){
+            steps{
+                sh 'model_preparation.py'
+            }
+        }
+        stage('model_testing') {
+            steps{
+                sh 'python3 model_testing.py'
+            }
+        }
+    }
+}
