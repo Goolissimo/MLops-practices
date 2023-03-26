@@ -6,8 +6,6 @@ pipeline {
                 sh 'pip install gdown'
                 sh 'pip install scikit-learn'
                 sh 'pip install pandas'
-                sh 'rmdir data test train'
-                sh 'mkdir data test train'
                 }
         }
         stage('git_run'){
