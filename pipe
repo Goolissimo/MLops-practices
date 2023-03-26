@@ -20,7 +20,7 @@ pipeline {
         }
         stage('model_preparation'){
             steps{
-                sh 'model_preparation.py'
+                sh 'python3 model_preparation.py'
             }
         }
         stage('model_testing') {
