@@ -4,4 +4,4 @@ WORKDIR /app
 COPY lab3/requirements.txt ./requirements.txt
 RUN pip3 install -r requirements.txt
 COPY . .
-CMD streamlit run toxic_classification.py
+CMD streamlit run lab3/toxic_classification.py
